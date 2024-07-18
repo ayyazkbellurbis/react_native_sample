@@ -46,23 +46,127 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
+# Sample React Native Project
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+This project is a React Native application structured according to clean architecture principles. It includes features such as dependency injection, reactive programming, and modular design to ensure maintainability and scalability.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Project Structure
 
-## Congratulations! :tada:
+The project is organized as follows:
 
-You've successfully run and modified your React Native App. :partying_face:
+```
+src
+├── App.tsx
+├── assets
+├── components
+│   └── ErrorBoundary.tsx
+├── modules
+│   ├── entities
+│   ├── presentation
+│   │   └── screens
+│   │       ├── Homescreen.tsx
+│   │       └── Profilescreen.tsx
+│   ├── repositories
+│   │   ├── ISampleRepository.ts
+│   │   └── SampleRepository.ts
+│   ├── redux
+│   └── usecases
+├── utils
+│   ├── inversify.config.ts
+│   ├── observer.ts
+│   └── types.ts
+```
 
-### Now what?
+### Root
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- **App.tsx**: The main entry point of the application.
+
+### Assets
+
+- **assets**: Directory for storing images, fonts, and other static resources.
+
+### Components
+
+- **components/ErrorBoundary.tsx**: A component to handle errors and display fallback UI.
+
+### Modules
+
+#### Entities
+
+- **entities**: Contains entity models representing the core business objects.
+
+#### Presentation
+
+- **presentation/screens**: Contains the UI screens of the application.
+  - **Homescreen.tsx**: Home screen component.
+  - **Profilescreen.tsx**: Profile screen component.
+
+#### Repositories
+
+- **repositories/ISampleRepository.ts**: Interface for the sample repository.
+- **repositories/SampleRepository.ts**: Implementation of the sample repository.
+
+#### Redux
+
+- **redux**: Contains Redux store configuration and slices.
+
+#### Usecases
+
+- **usecases**: Contains the business logic of the application.
+
+### Utils
+
+- **utils/inversify.config.ts**: Configuration for InversifyJS, a dependency injection library.
+- **utils/observer.ts**: Contains utilities for reactive programming.
+- **utils/types.ts**: Type definitions used throughout the application.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+
+### Installation
+
+1. Clone the repository:
+
+\`\`\`bash
+git clone <repository-url>
+cd sample
+\`\`\`
+
+2. Install dependencies:
+
+\`\`\`bash
+yarn install
+\`\`\`
+
+3. Run the application:
+
+\`\`\`bash
+yarn react-native run-android
+# or
+yarn react-native run-ios
+\`\`\`
+
+### Folder Structure
+
+- **src**: Main source code directory.
+- **assets**: Static resources.
+- **components**: Reusable components.
+- **modules**: Feature-based modules.
+- **utils**: Utility functions and configuration files.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
 
 # Troubleshooting
 
